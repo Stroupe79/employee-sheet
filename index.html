@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Travel Schedule</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-app.js"></script>
+
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-functions.js"></script>
+    <script src="./app.js"></script>
+    <script src="./moment.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container text-center">
+        <div class="jumbotron">
+            <h1 class="display-2">Employee Sheet</h1>
+        </div>
+
+        <div class="container">
+            <table class="table">
+                <thead>
+            <tr>
+                <td>Name</td>
+                <td>Role</td>
+                <td>Start Date</td>
+                <td>Months Worked</td>
+                <td>Monthly Rate</td>
+                <td>Total Billed</td>
+
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                        <td>Chris</td>
+                        <td>IT</td>
+                        <td>04/15/17</td>
+                        <td>24</td>
+                        <td>5000</td>
+                        <td>120000</td>
+        
+                    </tr>
+                    <div id="newData"></div>
+        </tbody>
+        </table>
+        </div>
+
+    </div>
+
+    <div class="container">
+
+            <div class="container">
+                    <div id="transportDropdown">
+                        <div class="row">
+                            <p class="col-md-2">Employee Name</p>
+                            <p class="col-md-2">Role</p>
+                            <p class="col-md-2">Start Date</p>
+                            <p class="col-md-2">Months Worked</p>
+                            <p class="col-md-2">Monthly Rate</p>
+                            <p class="col-md-2">Total Billed</p>
+                        </div>
+                       
+                        <div class="row">
+                        <input type="text" class="col-md-2" id="name" placeholder="Name">
+                        <input type="text" class="col-md-2" id="role">
+                        <input type="text" class="col-md-2" id="startDate" placeholder="01/31/19">
+                        <input type="number" class="col-md-2" id="monthsWorked">
+                        <input type="number" class="col-md-2" id="monthlyRate">
+                        <input type="text" class="col-md-2" id="billed">
+                    </div>
+                    <div class="row">
+                        <button type="button" id="submit" class="btn btn-danger mt-5" type="submit">Submit New</button>
+                    </div>
+                    </div>
+                    
+                    </div>
+    </div>
+
+
+</body>
+</html>

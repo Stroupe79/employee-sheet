@@ -1,0 +1,13 @@
+table, td {
+    border: 1px solid black;
+  }
+
+  thead {
+      font-weight: bold;
+  }
+
+  .jumbotron {
+      border: 2px solid black;
+      background-color: maroon;
+      color: white;
+  }
